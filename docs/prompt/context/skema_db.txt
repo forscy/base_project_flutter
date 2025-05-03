@@ -1,0 +1,95 @@
+User
+id
+nama
+email
+noTelp?
+agama
+password
+fotoUrl?
+role {e: Admin, Mahasiswa, Panitia, Dosen}
+
+Dosen
+id
+nip
+subRole? {e: Pengawas, Pembina}
+userId
+
+Mahasiswa
+id
+nim
+subRole {e: Mentee, Mentor}
+totalPoin (0)
+jurusan
+prodi
+userId
+kelompokId?
+
+Kelompok
+id
+namaKelompok
+kategoriKelompok
+
+KehadiranMahasiswa
+id
+waktuPencatatan?
+poinKehadiran (0)
+statusKehadiran {e: (BelumAbsen), Hadir, Sakit, Izin, Alpha}
+mahasiswaId
+kehadiranId
+
+PengajuanKetidakhadiranMahasiswa
+id
+waktuKeteranganDibuat
+buktiSuratPengajuanUrl {png/jpg}
+statusKetidakhadiran {e: Sakit, Izin}
+konfirmasiPanitia (false)
+panitiaId?
+mahasiswaId
+kehadiranId
+
+Kehadiran
+id
+jenisKehadiran {e: Awal, Akhir}
+tokenKodeQR {generate random unique}
+waktuKehadiranDibuka
+waktuKehadiranDitutup
+aktivitasId
+
+Aktivitas
+id
+namaAktivitas
+waktuDimulai
+waktuSelesai
+
+FileMateriAktivitas
+id
+fileMateriId
+aktivitasId
+
+FileMateri
+id
+urlFile
+
+Resume
+id
+konten
+poinResume
+waktuPengumpulan
+mahasiswaId
+aktivitasId
+
+ProgresHafalan
+id
+totalAyatHafalan
+waktuProgres
+terkonfirmasi
+waktuKonfirmasi?
+nomorSurat
+menteeId
+mentorId
+
+SuratAlQuran
+id
+nomorSurat
+namaSurat
+totalAyat

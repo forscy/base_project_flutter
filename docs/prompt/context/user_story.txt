@@ -1,0 +1,61 @@
+No	Stakeholder	Domain	Keinginan	User Stories	Acceptance Critetia	Impelemntasi Frontend
+US-01	User	Autentikasi	Melakukan autentikasi sebelum masuk ke dalam aplikasi	Sebagai seorang User, Saya ingin Melakukan autentikasi sebelum masuk ke dalam aplikasi	- User yang terdaftar di database dapat login dengan kriteria bahwa user tersebut merupakan pelaku mentoring saat itu	- User yang terdaftar di database dapat login dengan kriteria bahwa user tersebut merupakan pelaku mentoring saat itu
+US-02	Admin	Manajemen User	Mengelola user dengan role dosen, panitia, mahasiswa	Sebagai seorang Admin, Saya ingin Mengelola user dengan role dosen, panitia, mahasiswa	"- CRUD Data User Dosen
+- CRUD Data User Panitia
+- CRUD Data User Mahasiswa"	
+US-03	Admin	Manajemen Data Mahasiswa	Mengelola data mahasiswa	Sebagai seorang Admin, Saya ingin Mengelola data mahasiswa	"- Operasi CRUD
+- Membuat user dari data mahasiswa dari excel
+- Data sub role sudah terisi dari excel"	
+US-04	Admin	Manajemen File	Mengelola file yang di upload	Sebagai seorang Admin, Saya ingin Mengelola file yang di upload	- Operasi CRUD	
+US-05	Admin	Manajemen Aktivitas	Mengelola file yang di upload	Sebagai seorang Admin, Saya ingin Mengelola file yang di upload	"- Operasi CRUD pada aktivitas
+- Kehadiran pada aktivitas juga harus bisa di buatkan untuk kehadiran awal dan akhir
+- Bisa otomatis mengisi data kehadiran awal dan akhir pada aktivitas
+- Tidak semua aktivitas ada presensi kehadirannya, bisa di custom presensinya
+- Pastikan kehadiran dibuka hanya jika pada saat hari itu terdapat kehadiran yang dapat dilakukna presensi
+- Pastikan kehadiran yang dibuka itu waktu untuk presensinya awalnya berada di hari yang sama dan presensi akhirnya itu juga berada setelah jam aktivitas selesai"	"- Operasi CRUD pada aktivitas
+- Kehadiran pada aktivitas juga harus bisa di buatkan untuk kehadiran awal dan akhir
+- Bisa otomatis mengisi data kehadiran awal dan akhir pada aktivitas
+- Tidak semua aktivitas ada presensi kehadirannya, bisa di custom presensinya"
+US-06	Admin	Manajemen Kelompok	Mengelola file yang di upload	Sebagai seorang Admin, Saya ingin Mengelola file yang di upload	- Operasi CRUD	
+US-07	Panitia	File Aktivitas	Mengunggah dan menghapus file di dalam aktivitas yang tersedia	Sebagai seorang Panitia, Saya ingin Mengunggah dan menghapus file di dalam aktivitas yang tersedia	- Panitia dapat mengunggah dan menghapus file yang ada di dalam Aktivitas	
+US-08	Panitia	Konfirmasi Ketidakhadiran	mengonfirmasi keterangan ketidakhadiran yang diajukan mahasiswa	Sebagai seorang Panitia, Saya ingin mengonfirmasi keterangan ketidakhadiran yang diajukan mahasiswa	"- Panitia dapat melihat list pengajuan ketidakhadiran mahasiswa
+- Panitia dapat melihat bukti surat pengajuannya
+- Panitia dapat menekan tombol konfirmasi keterangan ketidakhadiran mahasiswa
+- Panitia yang mengkonfirmasi akan tercatat"	
+	Panitia	Pencatatan Kehadiran 	menampilkan QR untuk melakukan presensi	Sebagai seorang Panitia, Saya ingin menampilkan QR untuk melakukan presensi	"- Panitia bisa memperlihatkan Kode QR untuk aktivitas yang sedang berlangsung
+- Panitia hanya dapat memperlihatkan Kode QR jika kehadiran sudah dibuka
+- Kode QR yang ditampilkan oleh panitia itu realtime dari database kodenya dan bisa di scan oleh mahasiswa mentee dan mentor"	
+US-010	Mahasiswa	Aktivitas	Mengikuti aktivitas	Sebagai seorang Mahasiswa, Saya ingin Mengikuti aktivitas	"- Mahasiswa dapat melihat Aktivitas yang akan datang
+- Mahasiswa dapat melihat Aktivitas yang sedang berlangsung
+- Mahasiswa dapat melihat Aktivitas yang sudah terlewat
+- Mahasiswa dapat melihat Aktivitas yang pernah diikuti (Berdasarkan kehadiran awal)
+- Mahasiswa dapat melihat Aktivitas yang tidak dia ikuti (Berdasarkan kehadiran awal yang terlewat)"	"- Mahasiswa dapat melihat Aktivitas yang akan datang
+- Mahasiswa dapat melihat Aktivitas yang sedang berlangsung
+- Mahasiswa dapat melihat Aktivitas yang sudah terlewat
+- Mahasiswa dapat melihat Aktivitas yang pernah diikuti (Berdasarkan kehadiran awal)
+- Mahasiswa dapat melihat Aktivitas yang tidak dia ikuti (Berdasarkan kehadiran awal yang terlewat)"
+US-011	Mahasiswa	Kehadiran	melakukan pencatatan kehadiran awal dan akhir	Sebagai seorang Mahasiswa, Saya ingin melakukan pencatatan kehadiran awal dan akhir	"- Mahasiswa dapat melakukan pencatatan kehadiran awal dan akhir dengan cara melakukan scan kode qr berdasarkan waktu 
+- Mahasiswa mendapatkan poin kehadiran dengan kriteria sebagai berikut:
+1. tepat waktu = 100
+2. terlambat 0 > Menit >= 15 = 80
+3. terlambat 15 > Menit >= 30 = 70
+4. terlambat 30 > Menit >= 45 = 60
+5. terlambat 45 > Menit >= 60 = 50
+5. terlambat Menit > 60 = -50
+- Namun Jika kehadirannya berstatus sakit atau izin maka poin 0, jika berstatus alpha maka -50
+- Pastikan kehadiran dibuka hanya jika pada saat hari itu terdapat kehadiran yang dapat dilakukna presensi
+- Pastikan kehadiran yang dibuka itu waktu untuk presensinya awalnya berada di hari yang sama dan presensi akhirnya itu juga berada setelah jam aktivitas selesai"	
+US-012	Mahasiswa	Ketidakhadiran	melakukan pengajuan ketidak hadiran	Sebagai seorang Mahasiswa, Saya ingin melakukan pengajuan ketidak hadiran	"- Mahasiswa dapat melakukan konfirmasi terkait ketidak hadirannya baik Izin maupun Sakit melalui aplikasi
+- Panitia dapat melakukan konfirmasi terkait pengajuan ketidakhadirannya. Jika panitia sudah mengkonfirmsasi ketidak hadirannya maka status kehadiran dirubah menjadi keterangan yang diajukan, dan poin kehadiran menjadi 0. "	
+US-013	Mahasiswa	Resume	mengumpulkan resume	Sebagai seorang Mahasiswa, Saya ingin mengumpulkan resume	"- Resume yang dikumpulkan harus berupa teks yang disimpan di database
+- Setiap resume yang dikumpulkan akan mendapatkan 100 poin untuk yang mengumpulkan dan 0 jika tidak mengumpulkan resume
+- Resume yang dibuat itu di diketik dan dikumpulkan didalam aplikasi
+- Batas waktu pengumpulan resume itu sampai pukul 15.00 WIB"	"- Resume yang dikumpulkan harus berupa teks yang disimpan di database
+- Setiap resume yang dikumpulkan akan mendapatkan 100 poin untuk yang mengumpulkan dan 0 jika tidak mengumpulkan resume
+- Resume yang dibuat itu di diketik dan dikumpulkan didalam aplikasi
+- Batas waktu pengumpulan resume itu sampai pukul 15.00 WIB"
+US-014	Mentee	Pencatatan Progres Hafalan	mencatat progres hafalan saya dengan mencatatkan total surat yang saya hafal	Sebagai seorang Mentee, Saya ingin mencatat progres hafalan saya dengan mencatatkan total surat yang saya hafal	"- Mentee dapat mencatat hafalan dia setiap saatnya, terserah mentee akan mencatat hafalan dia kapan
+- Yang mentee catat adalah total jumlah ayat yang dia hafal dan surat apa (sesuai dengan surat yang tersedia di database)
+- Mentee tidak dapat menghapus hafalan yang sudah dia catat jika sudah dikonfirmasi oleh mentor"	
+US-015	Mentor	Konfirmasi Progres Hafalan mentee	mengkonfirmasi progres hafalan dari mentee saya	Sebagai seorang Mentor, Saya ingin mengkonfirmasi progres hafalan dari mentee saya	"- Mentor dapat menekan tombol konfirmasi progres hafalan mentee
+"	

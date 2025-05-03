@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="SIMETA - Sistem Informasi Mentoring Agama">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="SIMETA">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>SIMETA - Sistem Informasi Mentoring Agama</title>
+  <link rel="manifest" href="manifest.json">
+  
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+      height: 100vh;
+      width: 100vw;
+      font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .loading-container {
+      display: flex;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background-color: #f5f5f5;
+      z-index: 999;
+      transition: opacity 0.5s ease-out;
+    }
+    
+    .app-logo {
+      width: 120px;
+      height: 120px;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 20px;
+    }
+    
+    .app-logo svg {
+      width: 80px;
+      height: 80px;
+    }
+    
+    .app-title {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 8px;
+      color: #2196f3;
+    }
+    
+    .app-subtitle {
+      font-size: 16px;
+      color: #757575;
+      margin-bottom: 32px;
+    }
+    
+    .loading-spinner {
+      width: 50px;
+      height: 50px;
+      border: 4px solid rgba(33, 150, 243, 0.1);
+      border-radius: 50%;
+      border-left-color: #2196f3;
+      animation: spin 1s linear infinite;
+      margin-bottom: 20px;
+    }
+
+    .loading-progress {
+      width: 200px;
+      height: 6px;
+      background-color: #e0e0e0;
+      border-radius: 3px;
+      overflow: hidden;
+      position: relative;
+      margin-bottom: 16px;
+    }
+
+    .loading-bar {
+      position: absolute;
+      height: 100%;
+      width: 25%;
+      background-color: #2196f3;
+      border-radius: 3px;
+      animation: loading 2s infinite ease-in-out;
+    }
+
+    .loading-text {
+      color: #757575;
+      font-size: 14px;
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    @keyframes loading {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(400%); }
+    }
+
+    /* Flutter app will set the flutter-loader as display: none when it's done loading */
+    .flutter-loader.removing {
+      opacity: 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Loading animation that shows while Flutter loads -->
+  <div id="loading" class="loading-container flutter-loader">
+    <div class="app-logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#2196f3">
+        <path d="M21,5c-1.11-0.35-2.33-0.5-3.5-0.5c-1.95,0-4.05,0.4-5.5,1.5c-1.45-1.1-3.55-1.5-5.5-1.5S2.45,4.9,1,6v14.65 c0,0.25,0.25,0.5,0.5,0.5c0.1,0,0.15-0.05,0.25-0.05C3.1,20.45,5.05,20,6.5,20c1.95,0,4.05,0.4,5.5,1.5c1.35-0.85,3.8-1.5,5.5-1.5 c1.65,0,3.35,0.3,4.75,1.05c0.1,0.05,0.15,0.05,0.25,0.05c0.25,0,0.5-0.25,0.5-0.5V6C22.4,5.55,21.75,5.25,21,5z M21,18.5 c-1.1-0.35-2.3-0.5-3.5-0.5c-1.7,0-4.15,0.65-5.5,1.5V8c1.35-0.85,3.8-1.5,5.5-1.5c1.2,0,2.4,0.15,3.5,0.5V18.5z" />
+      </svg>
+    </div>
+    <div class="app-title">SIMETA</div>
+    <div class="app-subtitle">Sistem Informasi Mentoring Agama</div>
+    <div class="loading-spinner"></div>
+    <div class="loading-progress">
+      <div class="loading-bar"></div>
+    </div>
+    <div class="loading-text">Memuat aplikasi...</div>
+  </div>
+
+  <script>
+    // This script will hide the loading animation when Flutter is initialized
+    window.addEventListener('flutter-first-frame', function() {
+      var loadingElement = document.getElementById('loading');
+      loadingElement.classList.add('removing');
+      setTimeout(function() {
+        loadingElement.style.display = 'none';
+      }, 500);
+    });
+  </script>
+  
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+No	Nama Stakeholder	Penjelasan
+1	User	Adalah seluruh role dan sub role
+2	Admin	Adalah User dengan Role Admin yang dapat mengatur seluruh data yang ada di aplikasi
+3	Panitia	Adalah User dengan Role Panitia yang mengelola file yang di unggah di setiap aktivitas
+4	Mahasiswa	Adalah User dengan Role Mahasiswa
+5	Mentee	Adalah Mahasiswa dengan Sub Role Mentee
+6	Mentor	Adalah Mahasiswa dengan Sub Role Mentor

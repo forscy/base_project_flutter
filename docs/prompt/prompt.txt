@@ -1,0 +1,14 @@
+Konteks:
+- Aplikasi yang dibuat ini API belum ada sehingga menggunakan MOCK untuk sumber data.
+- Project menggunakan Provider dan Service sehingga jika dibutuhkan provider dan servicenya buatlah sendiri.
+- Jangan lupa tanamkan screen yang dibuat ke router config
+- Buat screen yang menerapkan widget widget, jadi sebisa ungkin jika bisa dibuat widget, buatlah dan simpan di folder widget.
+
+Silahkan Pahami konteks aplikasi yang akan dibuat berdasarkan project ini.
+
+Tujuan:
+Sekarang saya ingin kamu implementasikan untuk User Story Panitia ya.
+
+Kamu buatkan data mock yang sesuai sebagai sumber data yang ada. Dan intinya kamu buatin lah ya.
+
+Tapi sebagian sudah ada implementasinya tinggal difungsikan saja. Terus untuk harus bisa menampilkan QR Code kehadiran untuk kehadiran yang aktif

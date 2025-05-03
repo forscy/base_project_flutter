@@ -1,0 +1,3 @@
+
+
+sekarang bantu bikin home_screen isinya placeholder aja dulu. tapi nanti ngeliatin siapa yang lagi login, dia emailnya apa dan rolenya apa. sama bikin halaman login, nanti login kan pake authprovider nah nanti pas berhasil login ke home yang tadi disebutkan. Pastikan daftarkan pake GoRoute, dan jangan lupa untuk pastikan bahwa untuk membuat token saat login dan menyimpannya ke secure storage. Semuanya pake mock data dulu ya buat prototype bukan pake api karena api belum jadi

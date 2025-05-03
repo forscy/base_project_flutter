@@ -1,0 +1,7 @@
+Berdasarkan data yang sudah kamu ketahui ini, buatkan saya US-09	Mahasiswa	Aktivitas	Mengikuti aktivitas	Sebagai seorang Mahasiswa, Saya ingin Mengikuti aktivitas	"- Mahasiswa dapat melihat Aktivitas yang akan datang
+- Mahasiswa dapat melihat Aktivitas yang sedang berlangsung
+- Mahasiswa dapat melihat Aktivitas yang sudah terlewat
+- Mahasiswa dapat melihat Aktivitas yang pernah diikuti (Berdasarkan kehadiran awal)
+- Mahasiswa dapat melihat Aktivitas yang tidak dia ikuti (Berdasarkan kehadiran awal yang terlewat)"
+
+Pastikan bisa diakses dari home_screen
